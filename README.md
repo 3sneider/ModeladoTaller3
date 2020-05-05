@@ -3,7 +3,11 @@
 2. [Start Up](#start-up)
 3. [Request Services](#request-services)
 4. [List of Services](#list-of-Services)
-    1. [Validate User](#validate-user)
+    1. [Validate User (Action 1)](#validate-user)
+    2. [Load Services (Action 2)](#load-services)
+    3. [Load Payment Methods (Action 3)](#load-payment-methods)
+    4. [Validate Balance (Action 4)](#validate-balance)    
+    5. [Correct Transaction (Action 5)](#correct-transaction)
 
 
 # Description <a name="description"></a>
@@ -22,8 +26,38 @@ Todo se desarrolla en un entorno de produccion debidamente validado y testeado, 
 
 # List of Services <a name="list-of-Services"></a>
 
-## Validate User <a name="validate-user"></a>
+## Validate User (Action 1) <a name="validate-user"></a>
 
+Esta accion permite validar la existencia de un usuario, la validacion de forma ooleana nos indicara si el usuario esta o no validado.
 
+Request: URL-Request
+Format:
 
+## Load Services (Action 2) <a name="load-services"></a>
+
+Mostrara una lista de los servicios publicos pendientes de los cuales podra seleccionar uno y realizar el correspondiente pago.
+
+Request: URL-Request
+Format:
+
+## Load Payment Methods (Action 3) <a namme="load-payment-methods"></a>
+
+Se tendra la opcion de seleccionar entre los medios de pago mas populares y accesibles. 
+
+Request: URL-Request
+Format:
+
+## Validate Balance (Action 4) <a name="validate-balance"></a>
+
+Segun el tipo de pago seleccionado se podra hacer la validacion si el medio de pago cuenta o no con el cupo necesario para el edbito del pago
+
+Request: URL-Request
+Format:
+
+## Correct Transaction (Action 5) <a name="correct-transaction"></a>
+
+Una ves se ha finalizado el proceso, se envia un mensaje de notificaion al cliente,
+
+Request: URL-Request
+Format:
 
