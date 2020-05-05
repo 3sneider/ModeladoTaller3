@@ -68,6 +68,7 @@ Se tendra la opcion de seleccionar entre los medios de pago mas populares y acce
 
 GET
 Request: http://ofertasbsapi.azurewebsites.net/api/kafka/MediosdePago?topic=alejo2
+
 Parameter: Name: topic   Type Date : string     
 Response : array list string    
 Format:JSON 
@@ -81,6 +82,7 @@ Segun el tipo de pago seleccionado se podra hacer la validacion si el medio de p
 
 GET
 Request: http://ofertasbsapi.azurewebsites.net/api/kafka/ValidateBalance?numberTarjet=10
+
 Parameter: Name: numberTarjet   Type Date : string     
 Response : Boolean  
 Format:JSON
@@ -91,17 +93,19 @@ Tipo de servicio consumido:  REST
 Una ves se ha finalizado el proceso, se envia un mensaje de notificaion al cliente,
 GET
 Request: http://ec2-3-22-102-75.us-east-2.compute.amazonaws.com:83/api/OK/correctTransaction 
+
 Response : Ok status 200  
 Format:JSON
 Tipo de servicio consumido:  REST 
 
-## Pago de servicio Gas (Action 5) <a name="gas-service-soap"></a>
+## Pago de servicio Gas (Action 6) <a name="gas-service-soap"></a>
 
 Este es el servicio para poder realizar los pagos de la factura del Gas
 
 GET 
 Consultar Factura
 Request1: http://ec2-3-22-102-75.us-east-2.compute.amazonaws.com:83/api/kafka/getFactura?referenciaFactura=A
+
 Parameter: Name: referenciaFactura   Type Date : string     
 Response : array List 
 Format:JSON
@@ -110,6 +114,7 @@ Tipo de servicio consumido:  SOAP
 post 
 Compensar Pago Factura
 Request2: http://ec2-3-22-102-75.us-east-2.compute.amazonaws.com:83/api/kafka/PagoCompensar?referenciaFactura=A&valorTotal=2000
+
 Parameter: Name: referenciaFactura   Type Date : string  
            Name: valorTotal          Type Date : double    
 Response : array List 
@@ -119,19 +124,21 @@ Tipo de servicio consumido:  SOAP
 post 
 Pago Factura
 Request3: http://ec2-3-22-102-75.us-east-2.compute.amazonaws.com:83/api/kafka/PagoFactura?referenciaid=A&valorTotalfact=2000
+
 Parameter: Name: referenciaid    Type Date : string  
            Name: valorTotalfact  Type Date : double  
 Response : array List  de confirmacion de pago
 Format:JSON
 Tipo de servicio consumido:  SOAP 
 
-## Pago de servicio AGUA (Action 5) <a name="water-service-rest"></a>
+## Pago de servicio AGUA (Action 7) <a name="water-service-rest"></a>
 
 Este es el servicio para poder realizar los pagos de la factura del Agua 
 
 Get 
 Consultar Factura Agua 
-Request3: http://ec2-3-22-102-75.us-east-2.compute.amazonaws.com:83/api/kafka/ConsultaFactura/
+Request3: http://ec2-3-22-102-75.us-east-2.compute.amazonaws.com:83/api/kafka/ConsultaFactura/?numeroFactura=124&topic=aguaservice
+
 Parameter: Name: numeroFactura    Type Date : int 
            Name: topic            Type Date : string 
  
