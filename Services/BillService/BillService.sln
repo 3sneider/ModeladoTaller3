@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillService.API", "BillService.API\BillService.API.csproj", "{AB75487C-4196-41CA-B5FA-5881C339D408}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB75487C-4196-41CA-B5FA-5881C339D408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB75487C-4196-41CA-B5FA-5881C339D408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB75487C-4196-41CA-B5FA-5881C339D408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB75487C-4196-41CA-B5FA-5881C339D408}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F09A539-DF4D-470F-8048-DA634E718027}
+	EndGlobalSection
+EndGlobal
